@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    field.cattle.io/publicEndpoints: '[{"addresses":["10.210.149.40"],"port":32194,"protocol":"TCP","serviceName":"wrx:go-web-hello-world","allNodes":true}]'
+  creationTimestamp: "2019-12-27T09:17:58Z"
+  labels:
+    run: go-web-hello-world
+  name: go-web-hello-world
+  namespace: wrx
+  resourceVersion: "12255876"
+  selfLink: /api/v1/namespaces/wrx/services/go-web-hello-world
+  uid: c5e388e0-2889-11ea-a071-005056010e90
+spec:
+  clusterIP: 10.111.130.97
+  externalIPs:
+  - 10.210.149.42
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32194
+    port: 8100
+    protocol: TCP
+    targetPort: 8100
+  selector:
+    run: go-web-hello-world
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
