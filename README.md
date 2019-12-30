@@ -155,5 +155,6 @@ ca.crt:     1025 bytes
 namespace:  20 bytes
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+https://10.210.149.120:32615/#/overview?namespace=default
 
 
